@@ -1,0 +1,107 @@
+:root {
+    --bg: rgb(32, 41, 75);
+    --primary: rgb(204, 231, 204);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    border: none;
+}
+
+body {
+    font-family: 'Lexend', sans-serif;
+    background-color: var(--bg);
+    color: #000;    
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 7%;
+    background-color: rgba(1, 1, 1, 0.5);
+    border-bottom: 1px solid var(--primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: bolder;
+}
+
+.navbar .navbar-logo span {
+    color: var(--primary);
+    font-style: italic;
+}
+
+.navbar .navbar-nav a {
+    color: #fff;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    min-height: 100vh;
+    background-image: url(../assets/back-image2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.hero .content {
+    padding: 1.4rem 7%;
+    max-width: 60%;
+}
+
+.hero .content h1 {
+    width: 200px;
+    font-size: 2rem;
+    flex-wrap: wrap;
+    text-shadow: 1px 1px 3px rgba(1, 1, 1, 0.5) ;
+    line-height: 1.2;
+}
+
+.hero .content h1 span {
+    font-size: 4rem;
+    color: var(--primary);
+}
+
+.hero .content p {
+    line-height: 1.2;
+    font-size: 1rem;
+    max-width: 60rem;
+    text-shadow: 1px 1px 3px rgba(1, 1, 1, 0.5);
+    mix-blend-mode: hard-light;
+}
+
+
